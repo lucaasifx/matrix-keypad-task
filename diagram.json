@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "author": "EmbarcaTech Grupo 04 Subgrupo 08",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-pi-pico-w", "id": "pico", "top": 15.95, "left": -188.45, "attrs": {} },
+    { "type": "wokwi-membrane-keypad", "id": "keypad1", "top": -30.8, "left": -23.2, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 92.4,
+      "left": -303.4,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 34.8,
+      "left": -303.4,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": 150,
+      "left": -303.4,
+      "attrs": { "color": "blue" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -132,
+      "left": -180.6,
+      "attrs": { "volume": "0.1" }
+    }
+  ],
+  "connections": [ [ "pico:GP0", "$serialMonitor:RX", "", [] ], [ "pico:GP1", "$serialMonitor:TX", "", [] ] ],
+  "dependencies": {}
+}
