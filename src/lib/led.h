@@ -6,7 +6,13 @@
 #define LED_BLUE 12
 #define LED_RED 13
 
-// função de exemplo
-void initialize_led(uint8_t);
+// funções padrão
+void init_led(uint8_t);
+void turn_led_on(uint8_t);
+void turn_led_off(uint8_t);
+void blink_led(uint8_t, uint32_t);
+
+// tarefa
+void led_action(char);
 
 #endif
