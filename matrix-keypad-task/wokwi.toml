@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = 'build/matrix-keypad-task.uf2'
+elf = 'build/matrix-keypad-task.elf'
