@@ -25,7 +25,27 @@ void blink_led(uint8_t LED, uint32_t ms) {
 // **********************************************************
 
 void led_action(char key) {
+    static bool is_blinking = false;
 
+    if (key == '6') {
+        if (is_blinking) {
+            is_blinking = false;
+            turn_led_off(LED_RED);
+        } else {
+            is_blinking = true;
+            while (is_blinking) {
+                blink_led(LED_RED, 500);
+                sleep_ms(500);
+
+                char pressed_key = pico_keypad_get_key();
+                if (pressed_key == '6') {
+                    is_blinking = false;
+                    turn_led_off(LED_RED);
+                    break;
+                }
+            }
+        }
+    }
 }
 
 
