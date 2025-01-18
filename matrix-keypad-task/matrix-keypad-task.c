@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
 
-#define LED_GREEN_PIN 12    // Pino de conexão com o led verde é o 12
+#define LED_GREEN_PIN 11    // Pino de conexão com o led verde é o 11
 
 // Define os pinos do teclado com as portas GPIO
 uint columns[4] = {17, 18, 19, 20}; 
