@@ -3,37 +3,83 @@
   "author": "EmbarcaTech Grupo 04 Subgrupo 08",
   "editor": "wokwi",
   "parts": [
-    { "type": "board-pi-pico-w", "id": "pico", "top": 15.95, "left": -188.45, "attrs": {} },
-    { "type": "wokwi-membrane-keypad", "id": "keypad1", "top": -30.8, "left": -23.2, "attrs": {} },
+    { "type": "board-pi-pico-w", "id": "pico", "top": -118.45, "left": -6.05, "attrs": {} },
     {
-      "type": "wokwi-led",
-      "id": "led1",
-      "top": 92.4,
-      "left": -303.4,
-      "attrs": { "color": "red" }
+      "type": "wokwi-membrane-keypad",
+      "id": "keypad1",
+      "top": -299.6,
+      "left": -426.4,
+      "attrs": {}
     },
     {
       "type": "wokwi-led",
-      "id": "led2",
-      "top": 34.8,
-      "left": -303.4,
+      "id": "led1",
+      "top": 130.8,
+      "left": -217,
       "attrs": { "color": "green" }
     },
     {
       "type": "wokwi-led",
-      "id": "led3",
-      "top": 150,
-      "left": -303.4,
+      "id": "led2",
+      "top": 207.6,
+      "left": -217,
       "attrs": { "color": "blue" }
+    },
+    { "type": "wokwi-led", "id": "led3", "top": 284.4, "left": -217, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 195.95,
+      "left": -153.6,
+      "rotate": 180,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 272.75,
+      "left": -153.6,
+      "rotate": 180,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": 349.55,
+      "left": -153.6,
+      "rotate": 180,
+      "attrs": { "value": "1000" }
     },
     {
       "type": "wokwi-buzzer",
       "id": "bz1",
-      "top": -132,
-      "left": -180.6,
+      "top": -256.8,
+      "left": 30.6,
       "attrs": { "volume": "0.1" }
     }
   ],
-  "connections": [ [ "pico:GP0", "$serialMonitor:RX", "", [] ], [ "pico:GP1", "$serialMonitor:TX", "", [] ] ],
+  "connections": [
+    [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+    [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+    [ "keypad1:C3", "pico:GP2", "green", [ "v19.2", "h124.65", "v-115.2" ] ],
+    [ "keypad1:C2", "pico:GP3", "green", [ "v28.8", "h144", "v-105.6" ] ],
+    [ "keypad1:C1", "pico:GP4", "green", [ "v38.4", "h163.1", "v-105.6" ] ],
+    [ "keypad1:C4", "pico:GP1", "green", [ "v9.6", "h105.3", "v-86.4" ] ],
+    [ "keypad1:R1", "pico:GP8", "blue", [ "v76.8", "h240", "v-96" ] ],
+    [ "keypad1:R2", "pico:GP7", "blue", [ "v67.2", "h220.4", "v-96" ] ],
+    [ "keypad1:R3", "pico:GP6", "blue", [ "v57.6", "h201.3", "v-96" ] ],
+    [ "keypad1:R4", "pico:GP5", "blue", [ "v48", "h182.2", "v-105.6" ] ],
+    [ "pico:GP11", "led1:A", "green", [ "h-48", "v115.2" ] ],
+    [ "led1:C", "r1:2", "black", [ "v0" ] ],
+    [ "pico:GP12", "led2:A", "green", [ "h-38.4", "v192.04" ] ],
+    [ "led2:C", "r2:2", "black", [ "v0" ] ],
+    [ "pico:GP13", "led3:A", "green", [ "h-28.8", "v268.84" ] ],
+    [ "led3:C", "r3:2", "black", [ "v0" ] ],
+    [ "pico:GND.4", "r3:1", "black", [ "h-19.2", "v278.44", "h-172.8" ] ],
+    [ "r2:1", "r3:1", "black", [ "v0" ] ],
+    [ "r2:1", "r1:1", "black", [ "v0" ] ],
+    [ "pico:GND.6", "bz1:1", "black", [ "h0" ] ],
+    [ "pico:GP21", "bz1:2", "green", [ "h0" ] ]
+  ],
   "dependencies": {}
 }
