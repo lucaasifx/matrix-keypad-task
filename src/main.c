@@ -33,12 +33,10 @@ int main() {
         if(pressed_key)
             printf("Tecla pressionada: %c\n", pressed_key);
         
-        if(pressed_key >= '1' && pressed_key <= '6') {
-            turn_off_all_leds();
+        if(pressed_key >= '1' && pressed_key <= '6')
             led_action(pressed_key);
-        } else if(pressed_key == 'B') {
+        else if(pressed_key == 'B')
             beep(BUZZER01, 1000);
-        }
     }
 
 }
