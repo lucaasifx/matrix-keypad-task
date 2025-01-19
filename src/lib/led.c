@@ -25,26 +25,14 @@ void blink_led(uint8_t LED, uint32_t ms) {
 
 // **********************************************************
 
+
 void led_action(char key) {
-    static bool is_blinking = false;
-
-    if (key == '4') {
-        if (is_blinking) {
-            is_blinking = false;
-            turn_led_off(LED_GREEN);
-        } else {
-            is_blinking = true;
-            while (is_blinking) {
-                blink_led(LED_GREEN, 500);
-                sleep_ms(500);
-
-                char pressed_key = get_key();
-                if (pressed_key == '4') {
-                    is_blinking = false;
-                    turn_led_off(LED_GREEN);
-                    break;
-                }
-            }
+     if (key=='3'){
+        if (gpio_get(LED_RED)){
+            turn_led_off(LED_RED);
+        }else{
+            turn_led_on(LED_RED);
         }
-    }
+     }
+        
 }
