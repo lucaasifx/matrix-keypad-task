@@ -3,37 +3,73 @@
   "author": "EmbarcaTech Grupo 04 Subgrupo 08",
   "editor": "wokwi",
   "parts": [
-    { "type": "board-pi-pico-w", "id": "pico", "top": 15.95, "left": -188.45, "attrs": {} },
-    { "type": "wokwi-membrane-keypad", "id": "keypad1", "top": -30.8, "left": -23.2, "attrs": {} },
-    {
-      "type": "wokwi-led",
-      "id": "led1",
-      "top": 92.4,
-      "left": -303.4,
-      "attrs": { "color": "red" }
-    },
-    {
-      "type": "wokwi-led",
-      "id": "led2",
-      "top": 34.8,
-      "left": -303.4,
-      "attrs": { "color": "green" }
-    },
-    {
-      "type": "wokwi-led",
-      "id": "led3",
-      "top": 150,
-      "left": -303.4,
-      "attrs": { "color": "blue" }
-    },
+    { "type": "board-pi-pico-w", "id": "pico", "top": 15.95, "left": 99.55, "attrs": {} },
     {
       "type": "wokwi-buzzer",
       "id": "bz1",
-      "top": -132,
-      "left": -180.6,
+      "top": -122.4,
+      "left": 165,
       "attrs": { "volume": "0.1" }
+    },
+    {
+      "type": "wokwi-membrane-keypad",
+      "id": "keypad1",
+      "top": -126.8,
+      "left": -234.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb2",
+      "top": -130.4,
+      "left": 49.1,
+      "attrs": { "common": "cathode" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -43.2,
+      "left": 28.25,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": -43.2,
+      "left": 47.45,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": -43.2,
+      "left": 66.65,
+      "rotate": 90,
+      "attrs": { "value": "150" }
     }
   ],
-  "connections": [ [ "pico:GP0", "$serialMonitor:RX", "", [] ], [ "pico:GP1", "$serialMonitor:TX", "", [] ] ],
+  "connections": [
+    [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+    [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+    [ "keypad1:R1", "pico:GP4", "black", [ "v28.8", "h182.4", "v-201.6" ] ],
+    [ "keypad1:R2", "pico:GP8", "black", [ "v19.2", "h162.8", "v-144" ] ],
+    [ "keypad1:R3", "pico:GP9", "black", [ "v9.6", "h172.5", "v-124.8" ] ],
+    [ "keypad1:R4", "pico:GP16", "black", [ "v38.4", "h278.2", "v-76.8" ] ],
+    [ "keypad1:C1", "pico:GP17", "gold", [ "v48", "h278.3", "v-96" ] ],
+    [ "keypad1:C2", "pico:GP18", "gold", [ "v57.6", "h278.4", "v-124.8" ] ],
+    [ "keypad1:C3", "pico:GP19", "gold", [ "v67.2", "h278.25", "v-144" ] ],
+    [ "keypad1:C4", "pico:GP20", "gold", [ "v76.8", "h278.1", "v-163.2" ] ],
+    [ "pico:GP21", "bz1:2", "green", [ "h0" ] ],
+    [ "pico:GND.7", "bz1:1", "black", [ "h0" ] ],
+    [ "rgb2:COM", "pico:GND.8", "black", [ "v47.6", "h115.3", "v38.4" ] ],
+    [ "r1:1", "rgb2:R", "red", [ "h0" ] ],
+    [ "r1:2", "pico:GP13", "red", [ "v75.6", "h9.6", "v76.76" ] ],
+    [ "r2:1", "rgb2:G", "green", [ "h0" ] ],
+    [ "rgb2:B", "r3:1", "blue", [ "v9.6", "h11.2" ] ],
+    [ "pico:GP11", "r2:2", "green", [ "h-28.8" ] ],
+    [ "pico:GP12", "r3:2", "blue", [ "h-19.2", "v-163.16", "h9.6" ] ]
+  ],
   "dependencies": {}
 }
