@@ -30,6 +30,7 @@ void blink_led(uint8_t LED, uint32_t ms, uint8_t cycles) {
 
 void led_action(char key) {
 
+    // Verificação se tecla digitada foi "1" acende LED
     if (key =='1')
     {
         if(!gpio_get(LED_GREEN)) 
@@ -41,7 +42,6 @@ void led_action(char key) {
             turn_led_off(LED_GREEN);
         }
     }
-
     if (key == '3'){
         if (gpio_get(LED_RED)){
             turn_led_off(LED_RED);
@@ -51,8 +51,5 @@ void led_action(char key) {
     }
     if (key == '4') {
         blink_led(LED_GREEN, 1000, 3);
-    }
-    if (key == '6') {
-        blink_led(LED_RED, 1000, 3);
     }
 }
