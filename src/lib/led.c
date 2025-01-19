@@ -24,9 +24,9 @@ void blink_led(uint8_t LED, uint32_t ms) {
 
 // **********************************************************
 
-void led_action(char key) {
-    bool led_State=false;
+bool led_State=false;
 
+void led_action(char key) {
      if (key=='3'){
         if (led_State){
             turn_led_off(LED_RED);
