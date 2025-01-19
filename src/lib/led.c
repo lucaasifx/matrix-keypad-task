@@ -52,7 +52,4 @@ void led_action(char key) {
     if (key == '4') {
         blink_led(LED_GREEN, 1000, 3);
     }
-    if (key == '6') {
-        blink_led(LED_RED, 1000, 3);
-    }
 }
