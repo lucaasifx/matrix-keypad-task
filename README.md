@@ -1,13 +1,13 @@
 # Tarefa 01: Simulação de Keypad 4x4 com a Raspberry Pi Pico W
 
 ## Descrição
-Este projeto utiliza um Raspberry Pi Pico W conectado a um teclado matricial 4x4 para controlar três LEDs RGB e um buzzer.
+Nessa tarefa simulamos uma placa Raspberry Pi Pico W conectado a um teclado matricial 4x4 para controlar três LEDs RGB e um buzzer.
 Os seguintes recursos foram implementados:
 
 - **Botoes 1 a 3**: Funcionam como interruptores para ligar/desligar os LEDs verde, azul e vermelho, respectivamente.
 - **Botoes 4 a 6**: Controlam o modo "blink" (piscar) dos LEDs verde, azul e vermelho.
 - **Botão B**: Emite um beep utilizando o buzzer.
-
+O projeto foi desenvolvido de forma a funcionar também no hardware físico
 ## Estrutura do Projeto
 O projeto foi desenvolvido em C e utiliza o simulador **Wokwi** para emular o circuito. A estrutura de diretórios é organizada para facilitar o desenvolvimento e a compilação com a extensão **Raspberry Pi Pico** no VS Code.
 
@@ -21,20 +21,14 @@ O projeto foi desenvolvido em C e utiliza o simulador **Wokwi** para emular o ci
 - **Botão 1**: Liga/desliga o LED verde.
 - **Botão 2**: Liga/desliga o LED azul.
 - **Botão 3**: Liga/desliga o LED vermelho.
-- **Botão 4**: Habilita/desabilita o modo "blink" do LED verde.
-- **Botão 5**: Habilita/desabilita o modo "blink" do LED azul.
-- **Botão 6**: Habilita/desabilita o modo "blink" do LED vermelho.
+- **Botão 4**: Realiza um ciclo de "blink" no LED verde.
+- **Botão 5**: Realiza um ciclo de "blink" no LED azul.
+- **Botão 6**: Realiza um ciclo de "blink" no LED vermelho.
 
 ### Controle do Buzzer
 - **Botão B**: Emite um beep.
 
 ## Requisitos
-- **Hardware**:
-  - Raspberry Pi Pico W
-  - Keypad matricial 4x4
-  - 3 LEDs RGB (vermelho, verde e azul)
-  - Buzzer
-
 - **Software**:
   - VS Code com a extensão **Raspberry Pi Pico**
   - Simulador **Wokwi**
@@ -42,8 +36,9 @@ O projeto foi desenvolvido em C e utiliza o simulador **Wokwi** para emular o ci
 ## Como Compilar e Executar
 1. Clone este repositório:
    
-bash
+```bash
    git clone <https://github.com/lucaasifx/matrix-keypad-task>
+```
 
 
 2. Abra o projeto no VS Code.
