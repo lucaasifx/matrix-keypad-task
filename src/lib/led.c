@@ -29,6 +29,7 @@ void blink_led(uint8_t LED, uint32_t ms, uint8_t cycles) {
 
 
 void led_action(char key) {
+
     if (key =='1')
     {
         if(!gpio_get(LED_GREEN)) 
@@ -50,5 +51,8 @@ void led_action(char key) {
     }
     if (key == '4') {
         blink_led(LED_GREEN, 1000, 3);
+    }
+    if (key == '6') {
+        blink_led(LED_RED, 1000, 3);
     }
 }
