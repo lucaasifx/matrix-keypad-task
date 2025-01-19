@@ -24,8 +24,14 @@ void blink_led(uint8_t LED, uint32_t ms) {
 
 // **********************************************************
 
+
 void led_action(char key) {
-
+     if (key=='3'){
+        if (gpio_get(LED_RED)){
+            turn_led_off(LED_RED);
+        }else{
+            turn_led_on(LED_RED);
+        }
+     }
+        
 }
-
-
