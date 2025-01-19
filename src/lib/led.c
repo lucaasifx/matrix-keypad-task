@@ -33,10 +33,19 @@ void led_action(char key) {
 
     if (key=='1')
     {
-        turn_led_on(LED_GREEN);
-    }else
+        if (gpio_get(LED_GREEN)){
+            turn_led_off(LED_GREEN);
+        }else{
+            turn_led_on(LED_GREEN);
+        }
+    }
+    if (key=='2')
     {
-        turn_led_off(LED_GREEN);
+        if (gpio_get(LED_BLUE)){
+            turn_led_off(LED_BLUE);
+        }else{
+            turn_led_on(LED_BLUE);
+        }
     }
     if (key == '3'){
         if (gpio_get(LED_RED)){
@@ -44,13 +53,6 @@ void led_action(char key) {
         }else{
             turn_led_on(LED_RED);
         }
-    }
-    if (key=='2')
-    {
-        turn_led_on(LED_BLUE);
-    }else
-    {
-        turn_led_off(LED_BLUE);
     }
     if (key == '4') {
         blink_led(LED_GREEN, 1000, 3);
