@@ -70,7 +70,7 @@ Alunos:
  - Elisson Nadson
  - Lucas Emanoel
  - Davi Moura
- - Ariel
+ - Ariel Pina
  - Marcus Porto
  - Guilherme Lopes
  - Claudemir da Silva 
