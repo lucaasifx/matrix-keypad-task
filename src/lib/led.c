@@ -25,7 +25,7 @@ void blink_led(uint8_t LED, uint32_t ms) {
 // **********************************************************
 
 void led_action(char key) {
-    if (key=='1')
+    if (key=='2')
     {
         turn_led_on(LED_GREEN);
     }else
