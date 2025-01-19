@@ -7,9 +7,7 @@
 // Controle de frequencia do som emitido pelo buzzer
     // maior = mais agudo
     // menor = mais grave
-#define FREQUENCY 0
-// controle de volume
-#define VOLUME 0
+#define FREQUENCY 500
 
 
 void init_buzzer(uint8_t);
