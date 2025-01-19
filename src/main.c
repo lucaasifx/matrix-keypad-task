@@ -7,7 +7,11 @@
 #include "lib/buzzer.h"
 #include "lib/keypad.h"
 
-
+void turn_off_all_leds() {
+    turn_led_off(LED_GREEN);
+    turn_led_off(LED_BLUE);
+    turn_led_off(LED_RED);
+}
 
 int main() {
     stdio_init_all();
@@ -29,10 +33,12 @@ int main() {
         if(pressed_key)
             printf("Tecla pressionada: %c\n", pressed_key);
         
-        if(pressed_key >= '1' && pressed_key <= '6')
+        if(pressed_key >= '1' && pressed_key <= '6') {
+            turn_off_all_leds();
             led_action(pressed_key);
-        else if(pressed_key == 'B')
+        } else if(pressed_key == 'B') {
             beep(BUZZER01, 1000);
+        }
     }
 
 }
