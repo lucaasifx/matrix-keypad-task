@@ -29,11 +29,10 @@ int main() {
         if(pressed_key)
             printf("Tecla pressionada: %c\n", pressed_key);
         
-        if(pressed_key >= 1 && pressed_key <= 6)
+        if(pressed_key >= '1' && pressed_key <= '6')
             led_action(pressed_key);
         else if(pressed_key == 'B')
             beep(BUZZER01, 1000);
-        blink_led(LED_GREEN, 1000);
     }
 
 }
