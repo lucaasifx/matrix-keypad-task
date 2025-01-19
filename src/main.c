@@ -33,6 +33,8 @@ int main() {
             led_action(pressed_key);
         else if(pressed_key == 'B')
             beep(BUZZER01, 1000);
+        else if(pressed_key == '5')
+            led_action(pressed_key);
     }
 
 }

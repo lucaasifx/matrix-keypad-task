@@ -29,6 +29,8 @@ void blink_led(uint8_t LED, uint32_t ms, uint8_t cycles) {
 
 
 void led_action(char key) {
+    static bool led_blue_state = false;
+
     if (key=='1')
     {
         turn_led_on(LED_GREEN);
@@ -55,5 +57,13 @@ void led_action(char key) {
     }
     if (key == '6') {
         blink_led(LED_RED, 1000, 3);
+    }
+    if (key == '5') {
+        if (led_blue_state) {
+            turn_led_off(LED_BLUE);
+        } else {
+            turn_led_on(LED_BLUE);
+        }
+        led_blue_state = !led_blue_state;
     }
 }
