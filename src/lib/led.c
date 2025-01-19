@@ -43,7 +43,7 @@ void led_action(char key) {
             turn_led_on(LED_RED);
         }
     }
-    if (key=='1')
+    if (key=="2")
     {
         turn_led_on(LED_BLUE);
     }else
