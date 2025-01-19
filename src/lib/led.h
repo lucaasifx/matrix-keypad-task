@@ -11,6 +11,7 @@ void init_led(uint8_t);
 void turn_led_on(uint8_t);
 void turn_led_off(uint8_t);
 void blink_led(uint8_t, uint32_t, uint8_t);
+void turn_off_all_leds();
 
 // tarefa
 void led_action(char);
