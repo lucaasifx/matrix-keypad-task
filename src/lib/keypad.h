@@ -12,12 +12,9 @@ typedef struct {
     uint8_t gpio_rows[4];
 } Keypad;
 
-void keypad_init(Keypad *keypad);
+void init_keypad(Keypad *keypad);
 char keypad_get_key(Keypad *keypad);
 
-#define NO_KEY '\0'
 
-void init_keypad();
-char get_key();
 
 #endif
