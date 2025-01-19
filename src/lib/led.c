@@ -61,11 +61,6 @@ void led_action(char key) {
         blink_led(LED_RED, 1000, 3);
     }
     if (key == '5') {
-        if (led_blue_state) {
-            turn_led_off(LED_BLUE);
-        } else {
-            turn_led_on(LED_BLUE);
-        }
-        led_blue_state = !led_blue_state;
+        blink_led(LED_BLUE, 1000, 3);
     }
 }
