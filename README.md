@@ -61,8 +61,12 @@ O projeto foi desenvolvido em C e utiliza o simulador **Wokwi** para emular o ci
 
 
 
-## Simulação no Wokwi
-O projeto inclui suporte para simulação do circuito utilizando o **Wokwi**. **Após compilar o projeto** basta abrir o arquivo diagram.json e iniciar a simulação.
+## Simulação no Wokwi e Testes no kit de desenvolvimento BitDogLab
+O projeto inclui suporte para simulação do circuito utilizando o Wokwi. Após compilar o projeto, basta abrir o arquivo diagram.json e iniciar a simulação no Wokwi.
+
+Você pode assistir à simulação do circuito no Wokwi pelo seguinte link: [Simulação no Wokwi](https://www.youtube.com/watch?v=LkITQNAneRE).
+
+Além disso, foi realizado um teste prático utilizando o kit de desenvolvimento BitDogLab para verificar o funcionamento do sistema em hardware real. Confira o teste da placa real no link: [Teste no Kit de Desenvolvimento BitDogLab](https://www.youtube.com/watch?v=9UVB1yhkP68).
 
 ## Contribuição
 Esse projeto foi construído pelos membros do Grupo 04 Subgrupo 08 do EmbarcaTech, uma iniciativa do CEPEDI.
